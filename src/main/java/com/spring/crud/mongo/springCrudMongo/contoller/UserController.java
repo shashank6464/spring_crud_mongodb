@@ -19,8 +19,8 @@ public class UserController {
     @Autowired
     UserService service;
 
-    @GetMapping("/getUserByName")
-    public List<User> getUSerByName(@PathVariable("username") String name){
+    @GetMapping("/{username}")
+    public List<User> getUserByName(@PathVariable("username") String name){
         return service.findByName(name);
     }
 

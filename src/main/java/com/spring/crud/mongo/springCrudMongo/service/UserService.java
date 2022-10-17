@@ -19,5 +19,19 @@ public interface UserService {
 
     void deleteUserById(String id);
 
+    void deleteAllUsers();
+
+    User getByIdQuery(String id);
+
+    List<User> getAndQuery(String privileges, String name);
+
+    Integer countQuery(String privileges);
+
+    List<User> sortQuery(String privileges);
+
+    List<User> regexQuery();
+
+    List<User> showEmbeddedPhone();
+
    // void deleteAllUsers();
 }

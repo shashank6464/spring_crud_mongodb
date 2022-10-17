@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -54,11 +55,45 @@ public class UserController {
 
     }
 
-//    @DeleteMapping("/deleteAllUsers")
-//    public ResponseEntity<?> deleteAllUsers(){
-//        service.deleteAllUsers();
-//        return new ResponseEntity<>("All users deleted successfully", HttpStatus.OK);
-//    }
+    @DeleteMapping("/deleteAllUsers")
+    public ResponseEntity<?> deleteAllUsers(){
+        service.deleteAllUsers();
+        return new ResponseEntity<>("All users deleted successfully", HttpStatus.OK);
+    }
+
+    // Queries --------------------------
+
+    @PostMapping("/getByIdQuery")
+    public User getByIdQuery(@RequestBody String id){
+        return service.getByIdQuery(id);
+    }
+
+    @PostMapping("/getAndQuery")
+    public List<User> getAndQuery(@RequestBody Map<String, Object> obj){
+        return service.getAndQuery(obj.get("privileges").toString(), obj.get("name").toString());
+    }
+
+    @PostMapping("/countQuery")
+    public Integer countQuery(@RequestBody Map<String, Object> obj){
+        return service.countQuery(obj.get("privileges").toString());
+    }
+
+    @GetMapping("/sortQuery/{privileges}")
+    List<User> sortQuery(@PathVariable("privileges") String privileges){
+        return service.sortQuery(privileges);
+    }
+
+    @GetMapping("/regexQuery")
+    public List<User> regexQuery() {
+        return service.regexQuery();
+    }
+
+    @GetMapping("/showEmbeddedPhone")
+    public List<User> showEmbeddedPhone() {
+        return service.showEmbeddedPhone();
+    }
+
+
 
 
 }

@@ -15,6 +15,8 @@ public class User {
 
     private String name;
     private int age;
+
+    private String privileges;
     private List<Integer> finished;
 
     private List<String> badges;
@@ -54,6 +56,14 @@ public class User {
         this.age = age;
     }
 
+    public String getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(String privileges) {
+        this.privileges = privileges;
+    }
+
     public List<Integer> getFinished() {
         return finished;
     }
@@ -73,14 +83,14 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", privileges='" + privileges + '\'' +
                 ", finished=" + finished +
                 ", badges=" + badges +
                 '}';
     }
-
 
     //    "name": "Sue",
 //            "age": 19,

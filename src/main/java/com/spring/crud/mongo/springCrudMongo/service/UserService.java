@@ -11,7 +11,13 @@ public interface UserService {
 
     List<User> findAllUsers();
 
+    int countAllUsers();
+
     User saveUser(User user);
 
+    void saveAllUsers(List<User> users);
+
     void deleteUserById(String id);
+
+   // void deleteAllUsers();
 }

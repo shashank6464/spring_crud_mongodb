@@ -27,6 +27,12 @@ public class UserServiceImplementation implements UserService{
         return userRepository.findAll();
     }
 
+    @Override
+    public int countAllUsers() {
+        return (int) userRepository.count();
+    }
+
+
 
     @Override
     public User saveUser(User user) {
@@ -34,7 +40,17 @@ public class UserServiceImplementation implements UserService{
     }
 
     @Override
+    public void saveAllUsers(List<User> users) {
+        userRepository.saveAll(users);
+    }
+
+    @Override
     public void deleteUserById(String id) {
         userRepository.deleteById(id);
     }
+
+//    @Override
+//    public void deleteAllUsers(){
+//        userRepository.deleteAll();
+//    }
 }

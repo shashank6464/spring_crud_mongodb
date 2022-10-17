@@ -1,0 +1,96 @@
+[
+  {
+    "id": "1",
+    "name": "Sue",
+    "age": 19,
+    "privileges": "user",
+    "finished": [
+      17,
+      3
+    ],
+    "badges": [
+      "blue",
+      "black"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Steve",
+    "age": 46,
+    "privileges": "admin",
+    "finished": [
+      25
+    ],
+    "badges": [
+      "red",
+      "blue"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Bob",
+    "age": 42,
+    "privileges": "admin",
+    "finished": [
+      11,
+      25
+    ],
+    "badges": [
+      "green"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Willy",
+    "age": 22,
+    "privileges": "user",
+    "finished": [
+      6
+    ],
+    "badges": [
+      "blue",
+      "Picasso"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "John",
+    "age": 34,
+    "privileges": "admin",
+    "finished": [
+      5,
+      11
+    ],
+    "badges": [
+      "Picasso",
+      "black"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Steve",
+    "age": 23,
+    "privileges": "user",
+    "finished": [
+      14,
+      6
+    ],
+    "badges": [
+      "orange"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Martin",
+    "age": 43,
+    "privileges": "user",
+    "finished": [
+      18,
+      12
+    ],
+    "badges": [
+      "black",
+      "blue"
+    ]
+  }
+]

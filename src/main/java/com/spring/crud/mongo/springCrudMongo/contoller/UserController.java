@@ -29,10 +29,22 @@ public class UserController {
         return service.findAllUsers();
     }
 
+    @GetMapping("/countAllUsers")
+    public int countAllUsers(){
+        return service.countAllUsers();
+    }
+
+
     @PostMapping("/saveUser")
     public ResponseEntity<?> saveUser(@RequestBody User user){
         service.saveUser(user);
         return new ResponseEntity<>("User added successfully", HttpStatus.OK);
+    }
+
+    @PostMapping("/saveAllUsers")
+    public ResponseEntity<?> saveAllUsers(@RequestBody List<User> users){
+        service.saveAllUsers(users);
+        return new ResponseEntity<>(users.size()+" users added successfully", HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteUser/{userid}")
@@ -41,5 +53,12 @@ public class UserController {
         return new ResponseEntity<>("User deleted successfully", HttpStatus.OK);
 
     }
+
+//    @DeleteMapping("/deleteAllUsers")
+//    public ResponseEntity<?> deleteAllUsers(){
+//        service.deleteAllUsers();
+//        return new ResponseEntity<>("All users deleted successfully", HttpStatus.OK);
+//    }
+
 
 }
